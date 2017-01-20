@@ -1,0 +1,128 @@
+Your TA's name: Tim
+
+
+
+Students in your studio group:
+
+    Name         Student ID (begins with a 4)
+	
+1. Jonathan Chen 444160
+2. Ryan Condon   436701
+3. Kevin Lou     431573
+4. Yiheng Huang  452257
+5. Ben Lai		 452258
+6.
+
+Below each question, type in your short, to-the-point answers.
+
+Question A1: 
+	What do you see in both plots? 
+	
+	Both plots have a roughly quadratic shape.
+	
+	Are there any differences between the two?
+	
+	The tick plot is more smooth than the time plot.
+	
+	What could account for those differences?
+	 
+	That is because time varies due the program running on a computer. Tick are exact.
+	
+Discuss this (and all your responses for this assignment) with your TA as you go.
+
+Question A2:
+	Why do the times provided for Quadratic produce such a nice plot, while the original values of Linear did not?
+	
+	The values of the linear plot were too small to see on the plot. The quadratic values were large enough to see a pattern.
+	
+Question A3: 
+	From the runs you have tried so far, how does the placement of ticker.tick() calls affect the plots you see? 
+	In particular, do the changes affect the shapes of the curves, the values plotted, or both
+	
+	Placing ticker.tick() outside the for loop results in one tick all across. Putting it in one for loop results in a linear plot.
+	The values are the same as the time. Placing ticker.tick() in the nested for loop results in a quadratic plot with quadratic values.
+	Adding more ticker.tick() in any given location increases the values but not the shape.
+	
+Question A4: 
+	In terms of n, how would you characterize, in the most simple terms, 
+	the time and ticks curves that have been generated so far?
+	
+	The linear time and tick curves are characterized by n. The quadratic time and tick curves are characterized by n^2. 
+	The constant is characterized by 1.
+		
+Question A5: 
+	What would happen if you deleted all ticker.tick() calls in the innermost loop,
+	while leaving other calls to ticker.tick() that you just placed in run()?
+	
+	The plots would be linear with an n characterization.
+	
+Question B1:
+	What do you see? How do the curves reflect the code inside AddsTwoNumbers?
+	
+	The curves for AddsTwoNumbers is a constant. The tick constant is 10^8, which is the number times the for loop runs in run() regardless of n.
+	
+	Do you think the value of n matters here in terms of the time it takes to perform the operation?
+	Why or why not?
+	
+	The value of n does not matter because the number of times the for loop loops is the same regardless.
+	
+Question B2:
+	What do the data and plot tell you about the time it takes to allocate an array of n integers?
+	
+	It takes linearly longer time to allocate an array with a larger index.
+	
+	Is it reasonable to say that the line of code
+
+ 		this.array = new int[this.n]
+ 		
+	takes a constant amount of time, independent of the value of this.n?
+	
+	It is not reasonable because it would take longer time the larger n is.
+	
+Question B3:
+	Do the ticks agree in shape with the time we measured in running the Allocates code?
+	
+	No, the tick plot is constant, and time is linear.
+	
+Question B4:
+	Are the plots more similar to each other than before?
+	What does this tell you about how much time it takes to allocate an array of n integers?
+	
+	The two plots are more similar; the ticker plot is now linear. This suggests the time to allocate an array is linear dependent on the size.
+	
+Question B5:
+	Which group do you expect to finish first?
+	
+	The decimal group will finish first in most cases.
+	
+	Can you formalize, in terms of n the amount of work (ticks)
+	that each group must do to write n in the form required for that group?
+	
+	The tally group require n time while the decimal team is constant.
+
+	Both groups achieve the same result, namely the recording of an integer n.
+
+		Under what circumstances is the decimal notation more efficient than tally marks?
+		
+		n is a large number. 
+		
+		Under what circumstances is the tally mark notation more efficient than decimal notation?
+		
+		n is 0.
+		
+	If you are not sure, take a look the link from the assignment web page.
+	
+Question D1:
+	How would you describe the curve you see?
+	As a team, think about possible polynomial functions that could generate such a curve.
+	Write your answer here:
+	
+Question E1:
+	What is the closed form solution for T(n)?
+	
+Question E2:
+	What is the closed form solution for T(n)?
+	Can you express this result in terms of n, as well as k?
+	Write your answer here:
+	
+	
