@@ -1,0 +1,58 @@
+Studio 2 write up
+
+Your TA's name:
+
+
+
+Students in your studio group:
+
+    Name        Student ID (begins with a 4)
+	
+1. Mingyu Cao	452198
+2. Weiqiang Li	443012
+3. Han Wang		448064
+4. Yiheng Huang 452257
+5.
+6.
+
+Below each question, type in your short, to-the-point answers.
+
+Part A
+
+What do you see in the plots for ticks and time?
+The plots of both ticks and time are quadratic. 
+
+How would you characterize those curves?
+n^2/2+2.5*n+1 (when n!=0)
+
+Based on the current code for addLast, why do you see this behavior?
+because there is a loop inside a loop. In the for loop, there is one ticker.tick(). The ticks created by this ticker.tick is n; there is also a ticker.tick(3) function 
+no matter head equals null or not. so the ticks created by this are 3n. In the while loop of addLast function, the ticks are added like 0+0+1+2+3+...+(n-2)
+thus the ticks by this is (n-1)(n-2)/2
+in total, it would be n^2/2+2.5*n+1
+and when n = 0, it won't go into the for loop. so the tick is counted as 0
+
+
+Part B
+
+What behavior do you see now for appending n items to a list if you use a tail reference?
+The ticks is linear in terms of n.
+
+While we have reasoned so far only about time, if we are adding n elements to the end of a list, what is the asymptotic complexity of the additional space required when using the tail reference?
+O(1)
+
+Under what conditions would you recommend using a linked list with a tail reference vs. a linked list without at tail reference?
+using a linked list with a tail reference when we need to handle with the tail of the linked list, such as when we want to add a new node to the last of the list.
+
+
+Part C
+
+Why does getSize() take the time it does?
+the getSize() function keeps searching if there is next node in the list, and if does, increment the count.
+Therefore, the getSize ticks n times, which is linear.
+
+
+How did you achieve Θ(1) performance for getSize()?
+Define an int named count in the class, and when we add a new item into the list, we increment the count. So the getSize() only need to return count.
+
+
