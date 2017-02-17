@@ -66,6 +66,9 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// FIXME
 		//
+		ticker.tick();
+		array[size] = ans;
+		decrease(array[size].loc);
 		return ans;
 	}
 
@@ -99,7 +102,20 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// As described in lecture
 		//
-		
+		ticker.tick();
+		if (loc/2 == 0){
+			return;
+		}
+		if (array[loc].getValue().compareTo(array[loc/2].getValue())<0){
+
+			Decreaser<T> temp = array[loc/2];
+			array[loc/2]=array[loc];
+			array[loc]=temp;
+			array[loc/2].loc=loc/2;
+			array[loc].loc=loc;
+			decrease(loc/2);
+		}
+	
 	}
 	
 	/**
@@ -111,6 +127,14 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	 */
 	public T extractMin() {
 		T ans = array[1].getValue();
+		ticker.tick();
+		int i=size;
+		array[1]=array[i];
+	     array[1].loc=1;
+	     array[i]=null;
+	     size--;
+	     
+		 heapify(1);
 		//
 		// There is effectively a hole at the root, at location 1 now.
 		//    Fix up the heap as described in lecture.
@@ -130,10 +154,66 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	 * @param where the index into the array where the parent lives
 	 */
 	private void heapify(int where) {
-		//
-		// As described in lecture
-		//  FIXME
-		//
+		ticker.tick();
+		if(size>=where*2+1){
+			if(array[where].getValue().compareTo(array[where*2].getValue())>0&&array[where].getValue().compareTo(array[where*2+1].getValue())>0){
+				if(array[where*2].getValue().compareTo(array[where*2+1].getValue())<=0){
+					
+					Decreaser<T> temp = array[where*2];
+				    array[where*2]=array[where];
+					array[where]=temp;
+					array[where*2].loc=where*2;
+					array[where].loc=where;
+					
+					heapify(where*2);
+				}
+				
+				else{	
+					Decreaser<T> temp = array[where*2+1];
+					array[where*2+1]=array[where];
+					array[where]=temp;
+					array[where*2+1].loc=where*2+1;
+					array[where].loc=where;
+
+					heapify(where*2+1);
+				}
+			}
+			else if((array[where].getValue().compareTo(array[where*2].getValue())>0 && array[where].getValue().compareTo(array[where*2+1].getValue())<=0)||(array[where].getValue().compareTo(array[where*2+1].getValue())>0 && array[where].getValue().compareTo(array[where*2].getValue())<=0)){
+				if(array[where*2].getValue().compareTo(array[where*2+1].getValue())<0){
+					
+					Decreaser<T> temp = array[where*2];
+					array[where*2]=array[where];
+					array[where]=temp;
+					array[where*2].loc=where*2;
+					array[where].loc=where;
+
+					heapify(where*2);
+				}
+				else{
+					Decreaser<T> temp = array[where*2+1];
+					array[where*2+1]=array[where];
+					array[where]=temp;
+					array[where*2+1].loc=where*2+1;
+					array[where].loc=where;
+
+					heapify(where*2+1);
+				}
+			}
+		 }
+
+		 else if(size==where*2){
+			 if(array[where].getValue().compareTo(array[where*2].getValue())>0){
+				 Decreaser<T> temp = array[where];
+				 array[where]=array[where*2];
+				 array[where*2]=temp;
+				 array[where].loc=where;
+				 array[where*2].loc=where*2;
+				 }
+			 heapify(where*2);
+		}
+	   
+			else return;
+		 
 	}
 	
 	/**
