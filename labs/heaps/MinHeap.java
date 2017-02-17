@@ -103,7 +103,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		// As described in lecture
 		//
 		ticker.tick();
-		if (loc/2 == 0){
+		if (loc <= 1){
 			return;
 		}
 		if (array[loc].getValue().compareTo(array[loc/2].getValue())<0){
