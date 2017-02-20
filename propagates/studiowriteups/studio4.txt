@@ -1,0 +1,45 @@
+Studio 4 write up
+
+Your TA's name:
+Audrey Freeman
+
+
+Students in your studio group:
+
+    Name        Student ID (begins with a 4)
+	
+1.Weiqiang Li	443012
+2.Mingyu Cao	452198
+3.Yiheng Huang	452257
+4.han    wang    448064
+5.
+6.
+
+Substitution
+
+
+Using substitution, prove that the solution to T(n)=T(n-1)+10 is T(n)=10n
+T(n)=T(n-1)+10=10(n-1)+10=10n-10+10=10n
+
+
+Using substitution, show that T(n)=T(n-1)+10 is O(n-squared)
+T(n) <= k*n^2
+T(n)= T(n-1) + 10 <= k*(n-1)^2 + 10 <= k*n^2
+So:
+k*n^2 - 2kn + k + 10 <= k*n^2
+k+10<=2kn
+10<=(2n-1)k
+so if k = 10, we can prove T(n) <= 10*n^2, which is T(n) = O(n^2)
+
+Recursion Tree Solutions
+
+1. n^2+10
+
+
+2. 2n^2-3n+5
+
+
+3. 7*log5(n) + 28
+  or 7 * (int)log5(n) + 28
+
+4. 4n^2-2n
