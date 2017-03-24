@@ -86,6 +86,18 @@ public class ShortestPaths {
 		//   and act upon them as instructed in class and the text.
 		//
 		// FIXME
+		int tempDistance;
+		while(!pq.isEmpty()){
+			VertexAndDist currentMin = pq.extractMin();
+			tempDistance = currentMin.getDistance();
+			for(Edge e : currentMin.getVertex().edgesFrom()){
+				Decreaser<VertexAndDist> v = map.get(e.to);
+				if(tempDistance+weights.get(e)<v.getValue().getDistance()){
+					v.decrease(v.getValue().sameVertexNewDistance(tempDistance+weights.get(e)));
+					toEdge.put(v.getValue().getVertex(), e);
+				}
+			}
+		}
 	}
 
 	
@@ -105,6 +117,12 @@ public class ShortestPaths {
 		//
 		// FIXME
 		//
+		Vertex temp = endVertex;
+		while(temp != startVertex){
+			Edge edge = toEdge.get(temp);
+			path.addFirst(edge);
+			temp =edge.from;
+		}
 
 		return path;
 	}
