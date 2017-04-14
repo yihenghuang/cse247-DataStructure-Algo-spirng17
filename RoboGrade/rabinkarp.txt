@@ -1,0 +1,171 @@
+-------------------
+CSE247 Robot tester starts testing rabinkarp on 2017-04-14 14:46:49 -0500
+
+========
+Testing in GradingRepos/repos/cse247-s17-students-yihenghuang: rabinkarp as of 2017-04-14 09:00
+========
+Now in: /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-yihenghuang
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at b327eca late coupon used2
+No local changes to save
+
+Already up-to-date.
+Going back in time to: 2017-04-14 09:00
+At hash b327eca4ca41bccf0095bfd10e8d726666ec5860
+
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /Users/tdelanuez/git/cse247-s17-students-adelanuez key yihenghuang testfilesource TestRK package rabinkarp repo GradingRepos/repos/cse247-s17-students-yihenghuang
+     [copy] Copying 1 file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-yihenghuang/labs/rabinkarp
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+compile:
+     [echo] Compiling rabinkarp/RK
+    [mkdir] Created dir: /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-yihenghuang/bin
+    [javac] Compiling 1 source file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-yihenghuang/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+compile:
+     [echo] Compiling rabinkarp/TestRK
+    [javac] Compiling 1 source file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-yihenghuang/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test TestRK
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+test:
+    [junit] Running rabinkarp.TestRK
+    [junit] Testsuite: rabinkarp.TestRK
+    [junit] Looking for query 
+    [junit] Looking for query z
+    [junit] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+    [junit] Output:
+    [junit] Looking for query 
+    [junit] Looking for query z
+    [junit] 
+    [junit] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Looking for query 
+    [junit] Looking for query z
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testExample took 0.003 sec
+    [junit] 	FAILED
+    [junit] See example on web page if this fails expected:<97> but was:<0>
+    [junit] junit.framework.AssertionFailedError: See example on web page if this fails expected:<97> but was:<0>
+    [junit] 	at rabinkarp.TestRK.testExample(TestRK.java:18)
+    [junit] 
+    [junit] Testcase: testSameChar took 0.001 sec
+    [junit] 	FAILED
+    [junit] expected:<110> but was:<0>
+    [junit] junit.framework.AssertionFailedError: expected:<110> but was:<0>
+    [junit] 	at rabinkarp.TestRK.testSameChar(TestRK.java:34)
+    [junit] 
+    [junit] Testcase: testRandom took 0.001 sec
+    [junit] 	FAILED
+    [junit] expected:<122> but was:<0>
+    [junit] junit.framework.AssertionFailedError: expected:<122> but was:<0>
+    [junit] 	at rabinkarp.TestRK.testRandomLength(TestRK.java:47)
+    [junit] 	at rabinkarp.TestRK.testRandom(TestRK.java:25)
+    [junit] 
+
+BUILD FAILED
+/Users/tdelanuez/cse247-support/build.xml:34: Test rabinkarp.TestRK failed
+
+Total time: 0 seconds
+========
+Testing in GradingRepos/repos/cse247-s17-students-yihenghuang: rabinkarp as of 2017-04-21 09:00
+========
+Now in: /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-yihenghuang
+Your branch is up-to-date with 'origin/master'.
+HEAD is now at b327eca late coupon used2
+No local changes to save
+
+Already up-to-date.
+Going back in time to: 2017-04-21 09:00
+At hash b327eca4ca41bccf0095bfd10e8d726666ec5860
+
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /Users/tdelanuez/git/cse247-s17-students-adelanuez key yihenghuang testfilesource TestRK package rabinkarp repo GradingRepos/repos/cse247-s17-students-yihenghuang
+     [copy] Copying 1 file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-yihenghuang/labs/rabinkarp
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Compiling the code
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+compile:
+     [echo] Compiling rabinkarp/RK
+    [mkdir] Created dir: /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-yihenghuang/bin
+    [javac] Compiling 1 source file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-yihenghuang/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+compile:
+     [echo] Compiling rabinkarp/TestRK
+    [javac] Compiling 1 source file to /Users/tdelanuez/cse247-support/GradingRepos/repos/cse247-s17-students-yihenghuang/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test TestRK
+Buildfile: /Users/tdelanuez/cse247-support/build.xml
+
+test:
+    [junit] Running rabinkarp.TestRK
+    [junit] Testsuite: rabinkarp.TestRK
+    [junit] Looking for query 
+    [junit] Looking for query n
+    [junit] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+    [junit] Output:
+    [junit] Looking for query 
+    [junit] Looking for query n
+    [junit] 
+    [junit] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Looking for query 
+    [junit] Looking for query n
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testExample took 0.003 sec
+    [junit] 	FAILED
+    [junit] See example on web page if this fails expected:<97> but was:<0>
+    [junit] junit.framework.AssertionFailedError: See example on web page if this fails expected:<97> but was:<0>
+    [junit] 	at rabinkarp.TestRK.testExample(TestRK.java:18)
+    [junit] 
+    [junit] Testcase: testSameChar took 0 sec
+    [junit] 	FAILED
+    [junit] expected:<100> but was:<0>
+    [junit] junit.framework.AssertionFailedError: expected:<100> but was:<0>
+    [junit] 	at rabinkarp.TestRK.testSameChar(TestRK.java:34)
+    [junit] 
+    [junit] Testcase: testRandom took 0.001 sec
+    [junit] 	FAILED
+    [junit] expected:<110> but was:<0>
+    [junit] junit.framework.AssertionFailedError: expected:<110> but was:<0>
+    [junit] 	at rabinkarp.TestRK.testRandomLength(TestRK.java:47)
+    [junit] 	at rabinkarp.TestRK.testRandom(TestRK.java:25)
+    [junit] 
+
+BUILD FAILED
+/Users/tdelanuez/cse247-support/build.xml:34: Test rabinkarp.TestRK failed
+
+Total time: 0 seconds
+================
+Lab is not counted -- failed unit tests
+================
+
+CSE247 Robot tester ends testing rabinkarp on 2017-04-14 14:46:57 -0500
+-------------------
