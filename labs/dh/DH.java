@@ -21,7 +21,8 @@ public class DH {
 	 * @return
 	 */
 	public long getPubKey() {
-		return 0; // FIXME
+		
+		return MExp.gToTheXModP(base, privKey, modulus); // FIXME
 	}
 	
 	/**
@@ -31,7 +32,7 @@ public class DH {
 	 * @return
 	 */
 	public long getAgreedNum(long otherPubKey) {
-		return 0;  // FIXME
+		return MExp.gToTheXModP(otherPubKey, privKey, modulus);  // FIXME
 	}
 	
 }
